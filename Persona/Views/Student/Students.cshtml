@@ -1,0 +1,338 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Aesthetic by gettemplates.co
+    Twitter: http://twitter.com/gettemplateco
+    URL: http://gettemplates.co
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UM TAGUM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="GetTemplates.co" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/Content/savory/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/Content/savory/css/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="~/Content/savory/css/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/Content/savory/css/bootstrap.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="~/Content/savory/css/magnific-popup.css">
+    <!-- Bootstrap DateTimePicker -->
+    <link rel="stylesheet" href="~/Content/savory/css/bootstrap-datetimepicker.min.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="~/Content/savory/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/savory/css/owl.theme.default.min.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="~/Content/savory/css/style.css">
+    <!-- Modernizr JS -->
+    <script src="~/Content/savory/js/modernizr-2.6.2.min.js"></script>
+    <link href="~/Content/pretty-checkbox.min.css" rel="stylesheet" />
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body ng-app="Amad" ng-controller="studentctrl">
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <!-- <div class="page-inner"> -->
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div id="gtco-logo"><a href="index.html">UM TAGUM <em>.</em></a></div>
+                    </div>
+                    <div class="col-xs-8 text-right menu-1">
+                        <ul>
+                            <li><a href="../">Home</a></li>
+                            <li class="has-dropdown">
+                                <a href="../Home/Curriculum">Curriculum</a>
+                            </li>
+                            <li><a href="../Student/Students">Student</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <section id="sheader">
+            <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url('../../Content/img/5.png');" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0 text-left">
+
+                            <div class="row row-mt-15em">
+                                <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                                    <span class="intro-text-small">Hand-crafted by <a href="http://gettemplates.co" target="_blank">GetTemplates.co</a></span>
+                                    <h1 class="cursive-font">University of Mindanao</h1>
+                                </div>
+                                <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight" style="margin-top: -120px;">
+                                    <div class="form-wrap">
+                                        <div class="tab">
+                                            <div class="tab-content">
+                                                <div class="tab-content-inner active" data-content="signup">
+                                                    <h3 class="cursive-font">Register Student</h3>
+                                                    <div ng-hide="nextdiv">
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <label for="activities">First Name</label>
+                                                                <input type="text" class="form-control" ng-model="data.fname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <label for="date-start">Middle Name</label>
+                                                                <input type="text" class="form-control" ng-model="data.mname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <label for="date-start">Last Name</label>
+                                                                <input type="text" class="form-control" ng-model="data.lname">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-show="nextdiv">
+                                                        <label>Gender</label>
+                                                        <div class="col-md-12 content-center" style="margin-top: 5px;">
+                                                            <div class="pretty p-default">
+                                                                <input id="gmale" type="radio" name="gender" ng-model="data.gender" />
+                                                                <div class="state">
+                                                                    <label>Male</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pretty p-default">
+                                                                <input id="gfemale" type="radio" name="gender" />
+                                                                <div class="state">
+                                                                    <label>Female</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12" style="margin-top: 10px;">
+                                                                <label for="activities">Address</label>
+                                                                <input type="text" class="form-control" ng-model="data.address">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col-md-12">
+                                                            <input ng-show="update" type="button" class="btn btn-primary btn-block" value="Clear" ng-click="clear()">
+                                                            <input ng-hide="nextdiv" type="button" class="btn btn-primary btn-block" value="Next" ng-click="next()">
+                                                            <input ng-show="nextdiv" type="button" class="btn btn-primary btn-block" value="Prev" ng-click="prev()">
+                                                            <input ng-show="!update && nextdiv" type="button" class="btn btn-primary btn-block" value="Register" ng-click="saveStudent(data)">
+                                                            <input ng-show="update && nextdiv" type="button" class="btn btn-primary btn-block" value="Update" ng-click="updateStudent(data)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+
+        <div class="gtco-section" style="background-color: #2E2D30;">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                        <h2 class="cursive-font primary-color">List of Students</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6" ng-repeat="student in students" ng-click="editStudent(student)">
+                        <div class="fh5co-card-item" style="cursor: pointer;">
+                            <div class="center-img">
+                                <img src="~/Content/img/1.jpg" />
+                            </div>
+                            <div class="fh5co-text">
+                                <h2>{{student.fname}} {{student.mname}}. {{student.lname}}</h2>
+                                <p>{{student.gender}}</p>
+                                <p style="margin-top: -15px;">{{student.address}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+
+
+                    <div class="col-md-12 text-center">
+                        <div class="gtco-widget">
+                            <h3>Get In Touch</h3>
+                            <ul class="gtco-quick-contact">
+                                <li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
+                                <li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
+                                <li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+                            </ul>
+                        </div>
+                        <div class="gtco-widget">
+                            <h3>Get Social</h3>
+                            <ul class="gtco-social-icons">
+                                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center copyright">
+                        <p>
+                            <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+                            <small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- </div> -->
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Content/savory/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="~/Content/savory/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/savory/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="~/Content/savory/js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="~/Content/savory/js/owl.carousel.min.js"></script>
+    <!-- countTo -->
+    <script src="~/Content/savory/js/jquery.countTo.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="~/Content/savory/js/jquery.stellar.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="~/Content/savory/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/savory/js/magnific-popup-options.js"></script>
+
+    <script src="~/Content/savory/js/moment.min.js"></script>
+    <script src="~/Content/savory/js/bootstrap-datetimepicker.min.js"></script>
+    <!--AngularJS-->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/studentctrl.js"></script>
+
+    <!-- Main -->
+    <script src="~/Content/savory/js/main.js"></script>
+</body>
+</html>
+
+
+
+@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Student Input</title>
+        <link href="~/Content/css/style.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body ng-app="Amad" ng-controller="studentctrl">
+        <ul>
+            <li style="float:right"><a class="active" href="../">Home</a></li>
+            <li style="float:right"><a href="../Student/Students">Student Info</a></li>
+            <li style="float:right"><a href="../Home/Curriculum">Curriculum</a></li>
+        </ul>
+
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border">
+                    Student Information
+                </span>
+            </div>
+        </div>
+
+        <section id="inputstudent" class="section section-dark">
+            <h2>INPUT STUDENT INFROMATION</h2>
+
+            <label>First Name  : </label> <br>
+            <input type="text" ng-model="data.fname" size="30" />
+            <br><br>
+            <label>Last Name   : </label> <br>
+            <input type="text" ng-model="data.lname" size="30" />
+            <br><br>
+            <label>Middle Name : </label> <br>
+            <input type="text" ng-model="data.mname" size="30" />
+            <br><br>
+            <label>Address : </label> <br>
+            <input type="text" ng-model="data.address" size="30" />
+            <br><br>
+            <label>Gender: </label> <br>
+            <input id="gmale" type="checkbox" ng-model="data.gender" class="wew"><label>Male</label> <br><input type="checkbox" id="gfemale" name="box" class="wew"><label>Female</label>
+            <br><br>
+            <button ng-hide="update" ng-click="saveStudent(data)">SAVE</button>
+            <button ng-show="update" ng-click="clear()">Clear</button>
+            <button ng-show="update" ng-click="updateStudent(data)">Update</button>
+        </section>
+
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border">
+                    DISPLAY INPUTS
+                </span>
+            </div>
+        </div>
+
+        <section class="section section-dark">
+            <div class="row">
+                    <a href="#inputstudent" class="col-md-4" ng-repeat="student in students" ng-click="editStudent(student)" style="border: 1px solid white; margin: 5px; cursor: pointer;">
+                        <p>
+                            <label>{{student.fname}}</label> <br>
+                            <label>{{student.mname}}</label> <br>
+                            <label>{{student.lname}}</label> <br>
+                            <label>{{student.address}}</label>
+                            <label>{{student.gender}}</label> <br>
+                        </p>
+                    </a>
+                </div>
+        </section>
+
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Scripts/studentctrl.js"></script>
+    </body>
+    </html>*@
